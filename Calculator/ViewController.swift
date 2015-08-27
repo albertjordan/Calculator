@@ -9,8 +9,24 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    
+    var userIsTyping: Bool = false
 
+    @IBOutlet weak var display: UITextField!
   
 
+    @IBAction func appendDigit(sender: UIButton) {
+        
+        let digit = sender.currentTitle!
+        
+        if ( userIsTyping == false ) {
+            userIsTyping = true
+            display.text = digit
+        } else {
+            display.text =  display.text + digit
+
+        }
+        
+    }
 }
 
