@@ -28,5 +28,20 @@ class CalculatorViewController: UIViewController {
         }
         
     }
+    
+    var operandStack = [Double]()
+    
+    @IBAction func enter() {
+        userIsTyping = false
+    }
+    
+    var displayValue:Double {
+        get {
+            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        }
+        set {
+            display.text = "\(newValue)"
+        }
+    }
 }
 
