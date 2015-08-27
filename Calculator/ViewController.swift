@@ -10,7 +10,7 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
-    var userIsTyping: Bool = false
+    var userIsTyping = false
 
     @IBOutlet weak var display: UITextField!
   
@@ -31,6 +31,31 @@ class CalculatorViewController: UIViewController {
     
     //test
     
+    @IBAction func operate(sender: UIButton) {
+        
+        let op1 = operandStack.removeLast();
+        let op2 = operandStack.removeLast();
+        
+        switch sender.currentTitle! {
+        case "+":
+            displayValue = op1 + op2
+            break
+        case "-":
+            displayValue = op2 - op1
+            break
+        case "*":
+            displayValue = op2*op1
+            break
+        case "%":
+            displayValue = op2/op1
+            break
+        default:
+            break;
+        }
+        
+        operandStack.append(displayValue)
+        
+    }
     var operandStack = [Double]()
     
     @IBAction func enter() {
