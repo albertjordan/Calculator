@@ -33,6 +33,8 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func enter() {
         userIsTyping = false
+        operandStack.append(displayValue)
+        println("\(operandStack)")
     }
     
     var displayValue:Double {
