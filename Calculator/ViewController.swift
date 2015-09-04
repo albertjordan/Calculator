@@ -29,33 +29,51 @@ class CalculatorViewController: UIViewController {
         
     }
     
-    //test 2...
     
     @IBAction func operate(sender: UIButton) {
         
-        let op1 = operandStack.removeLast();
-        let op2 = operandStack.removeLast();
-        
+        if userIsTyping == true  {
+            println("auto enter")
+
+            enter()
+        }
+                
         switch sender.currentTitle! {
-        case "+":
-            displayValue = op1 + op2
-            break
-        case "-":
-            displayValue = op2 - op1
-            break
-        case "*":
-            displayValue = op2*op1
-            break
-        case "%":
-            displayValue = op2/op1
-            break
-        default:
-            break;
+        case "+": performOperation { $0 + $1}
+        case "-": performOperation { $1 - $0}
+        case "*": performOperation { $0 * $1}
+        case "%": performOperation { $1 % $0}
+        case "√": performUniryOperation { sqrt($0)}
+
+        default: break;
         }
         
-        operandStack.append(displayValue)
+        //operandStack.append(displayValue)
         
     }
+    
+    
+    func performOperation(operation: (Double,Double)->Double) {
+        if ( operandStack.count >= 2 ) {
+            displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
+            println("auto enter")
+            enter()
+
+        }
+    }
+    
+    func performUniryOperation(operation: Double -> Double) {
+        if ( operandStack.count >= 1 ) {
+            displayValue = operation(operandStack.removeLast())
+            println("auto enter")
+
+            enter()
+
+        }
+    }
+
+    
+    
     var operandStack = [Double]()
     
     @IBAction func enter() {
