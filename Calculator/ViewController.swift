@@ -33,7 +33,7 @@ class CalculatorViewController: UIViewController {
     @IBAction func operate(sender: UIButton) {
         
         if userIsTyping == true  {
-            println("auto enter")
+            print("auto enter")
 
             enter()
         }
@@ -56,7 +56,7 @@ class CalculatorViewController: UIViewController {
     func performOperation(operation: (Double,Double)->Double) {
         if ( operandStack.count >= 2 ) {
             displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
-            println("auto enter")
+            print("auto enter")
             enter()
 
         }
@@ -65,7 +65,7 @@ class CalculatorViewController: UIViewController {
     func performUniryOperation(operation: Double -> Double) {
         if ( operandStack.count >= 1 ) {
             displayValue = operation(operandStack.removeLast())
-            println("auto enter")
+            print("auto enter")
 
             enter()
 
@@ -79,7 +79,7 @@ class CalculatorViewController: UIViewController {
     @IBAction func enter() {
         userIsTyping = false
         operandStack.append(displayValue)
-        println("\(operandStack)")
+        print("\(operandStack)")
     }
     
     var displayValue:Double {
