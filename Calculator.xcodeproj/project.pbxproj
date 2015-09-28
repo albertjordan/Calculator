@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9566CB731BAF875D00B6B12F /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566CB721BAF875D00B6B12F /* CalculatorBrain.swift */; settings = {ASSET_TAGS = (); }; };
 		95AEE2811B89B3A00076B098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEE2801B89B3A00076B098 /* AppDelegate.swift */; };
 		95AEE2831B89B3A00076B098 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEE2821B89B3A00076B098 /* ViewController.swift */; };
 		95AEE2861B89B3A00076B098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95AEE2841B89B3A00076B098 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9566CB721BAF875D00B6B12F /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		95AEE27B1B89B3A00076B098 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AEE27F1B89B3A00076B098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95AEE2801B89B3A00076B098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				95AEE2821B89B3A00076B098 /* ViewController.swift */,
+				9566CB721BAF875D00B6B12F /* CalculatorBrain.swift */,
 				95AEE2841B89B3A00076B098 /* Main.storyboard */,
 				95AEE27E1B89B3A00076B098 /* Supporting Files */,
 			);
@@ -158,7 +161,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "albert jordan";
 				TargetAttributes = {
 					95AEE27A1B89B3A00076B098 = {
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9566CB731BAF875D00B6B12F /* CalculatorBrain.swift in Sources */,
 				95AEE2831B89B3A00076B098 /* ViewController.swift in Sources */,
 				95AEE2811B89B3A00076B098 /* AppDelegate.swift in Sources */,
 			);
@@ -278,6 +282,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -346,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "albert.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -356,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "albert.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -374,6 +381,7 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "albert.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
@@ -389,6 +397,7 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "albert.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
